@@ -2380,3 +2380,17 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+.info-section{
+  background: linear-gradient(135deg, #34bf49 0%, #2ecc71 100%);
+  margin-top: 20px;
+}
+.info-section h2{
+  
+  font-size: 48px;
+  color:var(--contrast-color);
+}
+.info-section p{
+
+  color:var(--contrast-color);
+}
