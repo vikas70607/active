@@ -2394,3 +2394,50 @@ section,
 
   color:var(--contrast-color);
 }
+/* Logo Slider CSS */
+.logo-slider {
+  background-color: #fff;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.logo-slider .logos{
+  display: inline-flex;
+  animation: scroll 25s linear infinite; 
+ 
+}
+
+.logo-slider .logos::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.logos img {
+  max-height: 80px;
+  width: 150px;
+  margin: 0 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: invert(1) sepia(1) saturate(10) hue-rotate(68deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 5)); 
+  }
+}
+
+@media (max-width: 768px) {
+  .logos img {
+    width: 100px;
+    margin: 0 10px;
+  }
+}
